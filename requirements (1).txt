@@ -1,0 +1,30 @@
+# ─────────────────────────────────────────────
+# Employee CRUD API – Python Dependencies
+# ─────────────────────────────────────────────
+# Compatible with Python 3.8+
+
+# Web framework
+fastapi==0.111.0
+
+# ASGI server (to run FastAPI)
+uvicorn[standard]==0.29.0
+
+# ORM & database
+sqlalchemy==2.0.30
+
+# Data validation & serialisation
+pydantic==2.7.1
+pydantic[email]==2.7.1      # enables EmailStr support
+email-validator==2.1.1      # required by pydantic[email]
+
+# SQLite ships with Python – no extra package needed.
+# If you switch to PostgreSQL or MySQL, add the relevant driver:
+#   psycopg2-binary==2.9.9    # PostgreSQL
+#   pymysql==1.1.0            # MySQL
+
+# ─────────────────────────────────────────────
+# Development / testing extras (optional)
+# ─────────────────────────────────────────────
+# httpx==0.27.0             # async test client for FastAPI
+# pytest==8.2.0
+# pytest-asyncio==0.23.6
